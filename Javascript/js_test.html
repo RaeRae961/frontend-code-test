@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>jQuery.noConflict();</script>
+
+	<style>
+		body{
+			padding:20px;
+			font-size:12px;
+		}
+		h2{
+			font-size:18px;
+			margin:15px 0 5px 0;
+			border-bottom:1px solid #ccc;
+			padding:0 0 5px 0;
+		}
+		p{
+			padding:0 0 10px 0;
+			margin:0;
+		}
+		ul{
+			margin-top:5px;
+			margin-bottom:0px;
+		}
+		li{
+			padding-top:3px;
+			padding-bottom:3px;
+		}
+		#setDims{
+			background:red;
+			width:300px;
+			height:150px;
+			padding:10px;
+			text-align:center;
+			color:white;
+			line-height:150px;
+		}
+		a.not-clicked{
+			color:#000;
+			font-size:14px;
+			font-weight:bold;
+		}
+		a.clicked{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Javascript Tests</h1>
+	</div>
+
+
+
+	<h2>Manipulate the Last LI</h2>
+	<p>Select the Last Li in this list and turn its text red.</p>
+	<div id="content">
+		<div>
+			<div>
+				<ul>
+					<li>First</li>
+					<li>Second</li>
+					<li>Third</li>
+					<li>Fourth</li>
+				</ul>
+			</div>
+		 </div>
+	</div>
+
+
+
+
+
+	<h2>Select specific children from a nested list.</h2>
+	<p>Select the only the first children of the LI "Sally".</p>
+	<div id="content2">
+		<div>
+			<div>
+				<p>Some Text</p>
+				<p>Some More Text</p>
+				<div>Random Div</div>
+				<ul>
+					<li>Bob</li>
+					<li>Sally
+						<ul>
+							<li>Car</li>
+							<li>Boat</li>
+							<li>Bike
+								<ul>
+									<li>Red</li>
+									<li>Green</li>
+									<li>Blue</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Larry</li>
+					<li>Mo</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<h2>Get a Field value and Write it to the page</h2>
+	<p>Write the value of the "Code Types" select field to a new div within the fieldset.</p>
+	<form method="post" action="">
+		<fieldset>
+			<label> Code Types:
+				<select id="codeTypes" name="CodeTypes">
+					<option value="">Choose</option>
+					<option value="php">PHP</option>
+					<option value="c+">C+</option>
+					<option value="asp" selected="selected">ASP</option>
+				</select>
+			</label>
+			<div id="newDiv"></div>
+		</fieldset>
+	</form>
+
+
+
+
+	<h2>Find Dimensions of an Element</h2>
+	<p>Write actual rendered dimensions of the following div including any padding to the div itself.</p>
+	<div id="setDims">This is a div. How big am i? Answer: 320 x 170.</div>
+
+
+
+
+	<h2>Events</h2>
+	<p>Place a click event on the following link. When clicked toggle it's class name from 'clicked' to 'not-clicked'.</p>
+	<a id="clickEventLink" href="#clicked" title="Click Me" class="not-clicked">Click Me</a>
+
+
+
+
+	<h2>Ajax</h2>
+	<p>Call ajax_return.html and write's its json as a "name": "value" list to the following div:</p>
+	 	<div id="jsonResponse">My Response Was...</div>
+<!--
+Place your answers below this comment block.
+Note: You have jquery already loaded on the page.
+Please also write your jquery in a no conflict manner.
+-->
+
+<script>
+$ = jQuery
+
+$( document ).ready(function( ) {
+    console.log( "ready!" );
+});
+
+//change last li to red
+
+var x = document.getElementById("content");
+var y = x.getElementsByTagName("LI")[x.getElementsByTagName("LI").length-1];
+		y.style.color = "red";
+
+//select first child of LI Sally - this is returning all 1st children
+$("#content2 div > ul > li > ul > li:nth-child(1)").append("<span> - 1st of Sally </span>");
+
+
+//write the value of the select types to a new div inside the fieldset
+$( document ).ready(function( ) {
+    $("#codeTypes").change(function() {
+			var selectedOption = $("#codeTypes option:selected");
+			$("#newDiv").html("Value = " + selectedOption.val() + ", Text = "  + selectedOption.text());
+		});
+});
+
+
+
+//Find Dimensions of an Element
+var myDiv = document.getElementById('setDims');
+var width = myDiv.offsetWidth; // int
+var height = myDiv.offsetHeight;
+	console.log(width, height);
+
+//Toggle class onclick event
+document.getElementById("clickEventLink").onclick = function() {
+    this.classList.toggle("clicked");
+	}
+
+//ajax return = '{"name" : "value"}', run on localhots server to avoid cross-conflicts
+//I tried various formats on this and I do get the data in the console.log but returns an empty string in the div.
+
+var food = {name: "", value: ""};
+
+$.ajax({
+	url: "ajax_return.html",
+	dataType: "json",
+}).success(function(data) {
+	console.log(data);
+	$("#jsonResponse").append(JSON.stringify(food ["name", "value"]));
+
+});
+
+
+</script>
+</body>
+</html>

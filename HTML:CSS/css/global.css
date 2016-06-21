@@ -1,0 +1,357 @@
+@font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham/Gotham-Black.otf');
+      src: url('fonts/Gotham/Gotham-Blackitalic.otf');
+      src: url('fonts/Gotham/Gotham-Bold.otf');
+      src: url('fonts/Gotham/Gotham-Book.otf');
+      src: url('fonts/Gotham/Gotham-Bookitalic.otf');
+      src: url('fonts/Gotham/Gotham-Light.otf');
+      src: url('fonts/Gotham/Gotham-Lightitalic.otf');
+      src: url('fonts/Gotham/Gotham-Medium.otf');
+      src: url('fonts/Gotham/Gotham-Mediumitalic.otf');
+      src: url('fonts/Gotham/Gotham-Thin.otf');
+      src: url('fonts/Gotham/Gotham-Thinitalic.otf');
+      src: url('fonts/Gotham/Gotham-Ultra.otf');
+      src: url('fonts/Gotham/Gotham-Ultraitalic.otf');
+      src: url('fonts/Gotham/Gotham-XLight.otf');
+      src: url('fonts/Gotham/Gotham-XLightitalic.otf');
+}
+#main-header {
+  width: 100%;
+}
+.container-fluid {
+  max-width: 80%;
+}
+.container {
+  width: 100%;
+}
+#signin  {
+  float: right;
+  margin: 1em 4em 0 0;
+  color: rgb(91, 91, 91);
+  letter-spacing: .5px;
+}
+.navbar {
+  margin: auto;
+}
+a.navbar-brand {
+  padding-bottom: 50px;
+}
+.navbar-default .navbar-nav>li>a {
+  color: rgb(207, 207, 207);
+}
+.navtop {
+  float: right;
+}
+.navtop ul.navbar-nav a:hover:before  { /*this underlines every li...should only be on active link */
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    left: 30%;
+    border-bottom: 3px solid rgb(210, 184, 139);
+    text-decoration: none;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: rgb(32, 55, 72);
+}
+.navbar-form{
+  text-transform: uppercase;
+}
+.navbar-form .form-control {
+  width: 330px;
+  border-radius: 0;
+  height: 45px;
+}
+#search {
+  font-weight: 600;
+  letter-spacing: 2px;
+  height: 45px;
+  width: 140px;
+  background: #fff;
+  color: rgb(1, 32, 55);
+  border: solid 2px;
+  border-radius: 0;
+}
+.navright {
+  color: rgb(0, 35, 65);
+  text-decoration: underline;
+  font-size: 16px;
+}
+.navright a {
+  color: rgb(0, 64, 112);
+}
+#rightnav {
+  margin-right: 50px;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+#rightnav a {
+  color: rgb(0, 64, 112);
+}
+.header-text  {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: rgb(0, 35, 65);
+  line-height: 24px;
+  margin-left: 10%;
+}
+.header-text .glyphicon {
+  color: rgb(137, 137, 137);
+}
+.header-text a {
+  color: rgb(180, 180, 180);
+  letter-spacing: 2px;
+}
+h1 {
+  line-height: 68px;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: lighter;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: rgb(137, 137, 137);
+}
+h4  {
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+.jumbotron {
+  background-image: url("../img/bg-skyline2.jpg");
+  min-height: 650px;
+  width: 100%;
+}
+.row  {
+  padding: 20px;
+}
+#contact  {
+  text-align: center;
+  background-color: rgb(220, 223, 233);
+  opacity: 0.9;
+  width: 600px;
+}
+.form-control {
+  border-radius: 0;
+  background-color: #fff;
+  height: 40px;
+  opacity: none;
+}
+.formbottom {
+  font-size: 36px;
+  color: #000;
+  padding-bottom: 25px;
+}
+.input-spacer {
+  margin-bottom: 35px;
+}
+.email  {
+  float:left;
+  margin-left: 5px;
+  font-weight: 200;
+  margin-top: -27px;
+}
+#message  {
+  margin-left: 15px;
+  height: 150px;
+  width: 94%;
+}
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive, .thumbnail a>img {
+    margin-top: 28px;
+}
+#theCarousel  {
+  float: right;
+}
+.info {
+  float: left;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: rgb(137, 137, 137);
+  line-height: 24px;
+  margin-left: 24px;
+}
+.contact  {
+  padding-left: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  color: rgb(137, 137, 137);
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.contact a {
+  text-decoration: underline;
+  color: rgb(1, 33, 60);
+}
+.contact .glyphicon {
+  color: rgb(1, 33, 60);
+  padding-right: 5px;
+}
+.fa-car {
+  color: rgb(1, 33, 60);
+  padding-right: 5px;
+}
+.fa-envelope  {
+  color: rgb(1, 33, 60);
+  padding-right: 5px;
+}
+.contact .btn-lg  {
+  margin-left: -20px;
+}
+.agents img {
+  max-height: 415px;
+}
+.agents a {
+  color: rgb(0, 35, 65);
+}
+.agents h3 a{
+  color: rgb(0, 35, 65):
+}
+.agents img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.agents h3  {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  background-color: rgba(255,255,255,.7);
+  padding: 5px 10px 10px;
+  font-weight:200;
+  letter-spacing: 3px;
+  font-size: 22px;
+  color: rgb(29, 48, 70);
+}
+p a  {
+  letter-spacing: 1px;
+  color: rgb(29, 48, 70);
+  text-decoration: underline;
+}
+.agents p {
+  color: rgb(180, 180, 180);
+}
+.radios {
+  float: left;
+  margin: 2px;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.radios li {
+  padding-bottom: 5px;
+}
+.contact .btn-group-lg>.btn, .btn-lg {
+  padding: 21px 60px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0;
+  letter-spacing: 2px;
+  background: #fff;
+  color: rgb(1, 33, 60);
+  border: solid 2px rgb(1, 33, 60);
+  width: 300px;
+  float: left;
+  margin-bottom: 18px;
+}
+#send {
+  width: 163px;
+  background:transparent;
+  font-weight: bold;
+  margin-top: 33px;
+}
+
+/*Media Screen Queries*/
+
+@media screen and (min-width: 1300px) and (max-width: 1700px) {
+  .navbar {
+    width: 1300px;
+    margin-left: -153px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #theCarousel {
+    float: left;
+    padding-right: 25px;
+    padding-bottom: 20px;
+  }
+  .navbar-default-nav>li>a {
+    width: 58px;
+  }
+  .navtop {
+    float: left;
+    padding-top: 25px;
+  }
+  .navbar-right {
+    float: left !important;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+  .contact .btn-lg {
+    margin-left: 10px;
+  }
+  .agents h3 {
+    bottom: 14%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info {
+    max-height: 340px;
+    overflow: hidden;
+  }
+  h1  {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  h2  {
+    font-size: 24px;
+  }
+  .navright {
+    display: none !important;
+  }
+  .navbar-brand>img {
+    width: 300px;
+  }
+  #signin {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+  .btn-lg {
+    width: 235px;
+    height: 50px;
+    text-align: left;
+    padding: 5px 0 5px 35px;
+    margin-top: 12px;
+  }
+  .agents h3 {
+    font-size: 18px;
+    bottom: 14%;
+  }
+  #send {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    margin-left: -62px;
+  }
+  .navbar-form .form-control {
+    width: 285px;
+  }
+  .navbar-brand>img {
+    width: 285px;
+  }
+  #contact {
+    margin-left: 70px;
+  }
+}
